@@ -100,7 +100,7 @@ class Lammps < Formula
 
     if build.include? "enable-user-omp"
       # OpenMP requires the latest gcc
-      ENV["CXX"] = Formula.factory('homebrew/dupes/gcc').opt_prefix/"bin/g++"
+      ENV["CXX"] = Formula.factory('homebrew/dupes/gcc').opt_prefix/"bin/g++-4.7"
 
       # The following should be part of MPIDependency mxcl/homebrew#17370
       ENV["OMPI_MPICXX"] = ENV["CXX"]              # correct the openmpi wrapped compiler
